@@ -1,0 +1,1 @@
+Vai na pasta sass > partials > _base.scss e dentro dele tem umas explicações. Não compilei nada, só fiz e estou te mandando

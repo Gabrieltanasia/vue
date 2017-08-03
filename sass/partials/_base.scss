@@ -1,0 +1,177 @@
+/*
+   README
+
+    * Esse � um arquivo base que tu vai/pode usar em todos os teus arquivos .scss ou seja cada novo arquivo .scss tu so faz o @import 'partials/base';
+    * Nele tu define o que tu vai ter em todas os teus arquivos independente sobre o que seja;
+    * Ele tem o nome de _base.scss pois com o underline na frente ele nao � compilado gerando um arquivo base.scss
+    * Em quest�o de estrutura tu pode criar dentro da tua pasta sass uma pasta com o nome de partials e dentro dele tu coloca esse arquivo
+
+    O QUE � UM PARTIAL?
+    R.: � um arquivo que tu vai usar em mais de um lugar mas n�o vai usar em todos os lugares. Por exemplo, tu pode ter um partial _button.scss onde
+        tu define nele os teus bot�es padr�es do site onde tu pode usar em diversos lugares ou pode criar um padrao de estilo de _input.scss onde nele
+        � definido o teu padrao de inputs do site todo e esses partials pode colocar sempre dentro da pasta partials
+
+    Exemplo:
+    * Tu tem o teu arquivo header.scss entao dentro dele tu faz o @import 'partials/base'; e como no teu header tu vai ter o teu input para pesquisa
+      tu faz o @import 'partials/input';
+*/
+
+
+@import "compass";
+@import "susy";
+@import "breakpoint";
+
+//Variaveis globais
+$max-width: 1140px;//pode usar ela pre definir o tamanho do teu container do site todo
+//Exemplo
+
+.container{
+    @include container($max-width);
+}
+// No CSS fica assim
+/*
+    .container{
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+*/
+
+
+/**
+* Tamanhos pra-definidos para breakpoint
+*/
+$break-min-big: (min-width $max-width); // media(min-width)
+$break-big: (max-width $max-width);  // media(max-width valor_do_container[1140px])
+$break-medium-big: (max-width 1024px);  //resolu��o menores (ipad)
+$break-medium: (max-width 800px); // Tablet
+$break-small: (max-width 520px); // Mobile para telas maiores Ex. Iphone 6s
+$break-smaller: (max-width 380px); //Mobile no geral. LA NO FINAL TEM EXEMPLO DO USO DO BREAKPOINT COM ESSAS VARIAVEIS
+
+$cor-base: #de1175;
+$cor-primaria: #ffffff;
+$cor-secundaria: #1e2021;
+$cor-bordas: #d5e1e9;
+$cor-texto: #252525;
+$cor-texto-secundario: #666666;
+
+$cor-border-light: lighten($cor-bordas, 10);
+$cor-base-darken: darken($cor-base, 10);
+$cor-base-darken-strong: darken($cor-base, 20);
+
+
+//Complemento da fun��o center, seta os positions
+@mixin location($top, $right: $top, $bottom: $top, $left: $right) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+//centraliza elementos, Params both (centraliza elemento 100%), vert (Centraliza elemento verticalmente) e horz (centraliza elemento horizontalmente)
+@mixin center($type: 'both') {
+    position: absolute;
+
+    @if $type == 'both' {
+        @include location(0);
+        margin: auto;
+    }
+    @if $type == 'vert' {
+        @include location(0,null);
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    @if $type == 'horz' {
+        @include location(null,0);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/**
+Ex. 01
+.logo{
+    @include center();//centraliza 100% pois na fun��o j� tem parametro default
+}
+
+Ex. 02
+.logo{
+    @include center('vert');//centraliza verticalmente
+}
+
+
+Ex. 03
+.logo{
+    @include center('horz');//centraliza horizontalmente
+}
+*/
+
+//=============================================================================================
+
+
+
+//Converte fontes em px para em
+// Nos PSD na maioria das vezes vem a fonte em px e o ideal � usar elas em EM entao essa funcao converte px para em usando como fonte base 16px
+// Como � uma function nao precisa fazer o include
+$pixel-base: 16;
+
+@function em($pixels, $contexto: $pixel-base) {
+   //se existir o pixel passado como parametro
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  //se existir pixel base definido
+  @if (unitless($contexto)) {
+    $contexto: $contexto * 1px;
+  }
+
+  @return $pixels / $contexto * 1em;
+}
+
+//Exemplo
+
+/*
+    h1{
+        font-size: em(16);// vai ficar no css = font-size: 1em;
+    }
+*/
+
+//=========================================================================================
+
+/*
+   UTILIZACAO DO BREAKPOINT
+   O Breakpoint � um framework para utilizacao do media query
+   nativamente no css utilizamos o media query desse modo
+
+    @media(max-width 800px){
+        .logo{
+            float: right;
+        }
+    }
+
+    Mas usando o breakpoint no Sass fica muito mais simples e organizado
+
+    EX.:
+
+
+    .logo{
+        @include span(3 of 12);
+        background-color: $cor-base;//variavel definida no come�o do arquivo
+
+        //dentro da pr�pria div tu define teu breakpoint
+        @include breakpoint($break-medium){// $break-medium = max-width 800px (definido la no comeco do arquivo)
+            @include span(5 of 12);
+        }
+    }
+
+    //Como isso vai ficar no css compilado
+
+    @media(max-width 800px){
+        .logo{
+            width: 49.15254%;
+            float: left;
+            margin-right: 1.69492%;
+        }
+
+*/

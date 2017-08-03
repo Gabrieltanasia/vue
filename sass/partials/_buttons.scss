@@ -1,0 +1,412 @@
+@import "base";
+
+//Tamanhos
+$button-border-size: 1px !default;
+$button-border-radius-size: 3px !default;
+
+$button-smaller-font-size: 10px !default;
+$button-smaller-height: 15px !default;
+$button-smaller-width: 40px !default;
+$button-smaller-icon-height: 10px !default;
+$button-smaller-icon-width: 10px !default;
+
+$button-small-font-size: 12px !default;
+$button-small-height: 20px !default;
+$button-small-width: 60px !default;
+$button-small-icon-height: 13px !default;
+$button-small-icon-width: 13px !default;
+
+$button-medium-font-size: 14px !default;
+$button-medium-height: 30px !default;
+$button-medium-width: 100px !default;
+$button-medium-icon-height: 20px !default;
+$button-medium-icon-width: 20px !default;
+
+$button-big-font-size: 16px !default;
+$button-big-height: 35px !default;
+$button-big-width: 150px !default;
+$button-big-icon-height: 25px !default;
+$button-big-icon-width: 25px !default;
+
+$button-bigger-font-size: 20px !default;
+$button-bigger-height: 45px !default;
+$button-bigger-width: 150px !default;
+$button-bigger-icon-height: 30px !default;
+$button-bigger-icon-width: 30px !default;
+
+//Cores
+$button-default-text: $cor-primaria !default;
+$button-default-bg: #df1b78 !default;
+$button-default-hover-bg: lighten($button-default-bg, 10) !default;
+$button-default-border: #ac0d5b !default;
+$button-default-hover-border: lighten($button-default-border, 10) !default;
+
+$button-base-text: #ffffff !default;
+$button-base-bg: $cor-base !default;
+$button-base-hover-bg: lighten($button-base-bg, 10) !default;
+$button-base-border: $cor-base !default;
+$button-base-hover-border: lighten($button-base-border, 10) !default; 
+
+$button-warning-text: #ffffff !default;
+$button-warning-bg: #de5511 !default;
+$button-warning-hover-bg: lighten($button-warning-bg, 10) !default;
+$button-warning-border: #a83e0a !default;
+$button-warning-hover-border: lighten($button-warning-border, 10) !default;
+
+$button-success-text: #ffffff !default;
+$button-success-bg: #2c9f2c !default;
+$button-success-hover-bg: lighten($button-success-bg, 10) !default;
+$button-success-border: #1f831f !default;
+$button-success-hover-border: lighten($button-success-border, 10) !default;
+
+$button-buy-text: #ffffff !default;
+$button-buy-bg: #18c250 !default;
+$button-buy-hover-bg: lighten($button-buy-bg, 10) !default;
+$button-buy-border: #18c250 !default;
+$button-buy-hover-border: lighten($button-buy-border, 10) !default;
+
+$button-danger-text: #ffffff !default;
+$button-danger-bg: #d84025 !default;
+$button-danger-hover-bg: lighten($button-danger-bg, 10) !default;
+$button-danger-border: #c53b23 !default;
+$button-danger-hover-border: lighten($button-danger-border, 10) !default;
+
+$button-primary-text: #ffffff !default;
+$button-primary-bg: #2f3741 !default;
+$button-primary-hover-bg: lighten($button-primary-bg, 10) !default;
+$button-primary-border: #21262d !default;
+$button-primary-hover-border: lighten($button-primary-border, 10) !default;
+
+$button-light-text: #1e2021 !default;
+$button-light-bg: #d5e1e9 !default;
+$button-light-hover-bg: lighten($button-light-bg, 10) !default;
+$button-light-border: darken($button-light-bg, 10) !default;
+$button-light-hover-border: lighten($button-light-border, 10) !default;
+
+$button-danger-dark-text: #ffffff !default;
+$button-danger-dark-bg: #9c1613 !default;
+$button-danger-dark-hover-bg: lighten($button-danger-dark-bg, 10) !default;
+$button-danger-dark-border: darken($button-danger-dark-bg, 10) !default;
+$button-danger-dark-hover-border: lighten($button-danger-dark-border, 10) !default;
+
+$button-ok-text: #ffffff !default;
+$button-ok-bg: #2c9f2c !default;
+$button-ok-hover-bg: darken($button-ok-bg, 10) !default;
+$button-ok-border: darken($button-ok-bg, 10) !default;
+$button-ok-hover-border: lighten($button-ok-border, 10) !default;
+
+$button-cancel-text: #ffffff !default;
+$button-cancel-bg: #c91c19 !default;
+$button-cancel-hover-bg: darken($button-cancel-bg,10) !default;
+$button-cancel-border: darken($button-cancel-bg, 10) !default;
+$button-cancel-hover-border: lighten($button-cancel-border, 10) !default;
+
+$button-darken-text: #ffffff !default;
+$button-darken-bg: #000 !default;
+$button-darken-hover-bg: darken($button-darken-bg,10) !default;
+$button-darken-border: darken($button-darken-bg, 10) !default;
+$button-darken-hover-border: lighten($button-darken-border, 10) !default;
+
+$button-avise-me-text: #ffffff !default;
+$button-avise-me-bg: #ff3d31 !default;
+$button-avise-me-hover-bg: darken($button-avise-me-bg,10) !default;
+$button-avise-me-border: darken($button-avise-me-bg, 10) !default;
+$button-avise-me-hover-border: lighten($button-avise-me-border, 10) !default;
+
+$button-login-text: #ffffff !default;
+$button-login-bg: #67b64b !default;
+$button-login-hover-bg: darken($button-login-bg,10) !default;
+$button-login-border: $button-login-bg !default;
+$button-login-hover-border: lighten($button-login-border, 10) !default;
+ 
+$button-cadastro-text: #ffffff !default;
+$button-cadastro-bg: #3a97d2 !default;
+$button-cadastro-hover-bg: darken($button-cadastro-bg,10) !default;
+$button-cadastro-border: $button-cadastro-bg !default;
+$button-cadastro-hover-border: lighten($button-cadastro-border, 10) !default;
+
+@mixin button-style($bg-color, $border-color, $hover-bg-color, $hover-border-color, $color) {
+    border-color: $border-color;
+    border-style: solid;
+    border-width: $button-border-size;
+    background-color: $bg-color;
+    color: $color;
+
+    &:hover {
+        color: $color;
+        text-decoration: none;
+        background-color: $hover-bg-color;
+        border-color: $hover-border-color;
+    }
+}
+
+@mixin button-clear($color, $font-size:"") {
+    &.button-clear {
+        border-color: transparent;
+        background: none;
+        box-shadow: none;
+        color: $color;
+
+        @if $font-size != "" {
+            font-size: $font-size;
+        }
+    }
+}
+
+@mixin button-outline($border-color, $background-color, $text-color:"") {
+    &.button-outline {
+        border-color: $border-color;
+        background: transparent;
+
+        @if $text-color == "" {
+            $text-color: $background-color;
+        }
+        color: $text-color;
+
+        &:hover {
+            background-color: $background-color;
+            box-shadow: none;
+            color: #fff;
+        }
+    }
+}
+
+.button {
+    position: relative;
+    min-width: $button-medium-width;
+    min-height: $button-medium-height;
+    margin: 0;
+    padding: 5px 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: $button-medium-font-size;
+    line-height: $button-medium-height;
+    cursor: pointer;
+
+    @include border-radius($button-border-radius-size);
+    @include box-sizing();
+
+    &.button-smaller {
+        min-width: $button-smaller-width;
+        min-height: $button-smaller-height;
+        font-size: $button-smaller-font-size;
+        line-height: $button-smaller-height;
+
+        .icon {
+            height: $button-smaller-icon-height;
+            width: $button-smaller-icon-width;
+            line-height: $button-smaller-height;
+
+            &.icon-left {
+                margin-right: $button-smaller-icon-width/2;
+            }
+
+            &.icon-right {
+                margin-left: $button-smaller-icon-width/2;
+            }
+        }
+    }
+
+    &.button-small {
+        min-width: $button-small-width;
+        min-height: $button-small-height;
+        font-size: $button-small-font-size;
+        line-height: $button-small-height;
+
+        .icon {
+            height: $button-small-icon-height;
+            width: $button-small-icon-width;
+            line-height: $button-small-height;
+
+            &.icon-left {
+                margin-right: $button-small-icon-width/2;
+            }
+
+            &.icon-right {
+                margin-left: $button-small-icon-width/2;
+            }
+        }
+    }
+
+    &.button-medium {
+        min-width: $button-medium-width;
+        min-height: $button-medium-height;
+        font-size: $button-medium-font-size;
+        line-height: $button-medium-height;
+
+        .icon {
+            height: $button-medium-icon-height;
+            width: $button-medium-icon-width;
+            line-height: $button-medium-height;
+
+            &.icon-left {
+                margin-right: $button-medium-icon-width/2;
+            }
+
+            &.icon-right {
+                margin-left: $button-medium-icon-width/2;
+            }
+        }
+    }
+
+    &.button-big {
+        min-width: $button-big-width;
+        min-height: $button-big-height;
+        font-size: $button-big-font-size;
+        line-height: $button-big-height;
+
+        .icon {
+            height: $button-big-icon-height;
+            width: $button-big-icon-width;
+            line-height: $button-big-height;
+
+            &.icon-left {
+                margin-right: $button-big-icon-width/2;
+            }
+
+            &.icon-right {
+                margin-left: $button-big-icon-width/2; 
+            }
+        }
+    }
+
+    &.button-bigger {
+        min-width: $button-bigger-width;
+        min-height: $button-bigger-height;
+        font-size: $button-bigger-font-size;
+        line-height: $button-bigger-height;
+
+        .icon {
+            height: $button-bigger-icon-height;
+            width: $button-bigger-icon-width;
+            line-height: $button-bigger-height;
+
+            &.icon-left {
+                margin-right: $button-bigger-icon-width/2;
+            }
+
+            &.icon-right {
+                margin-left: $button-bigger-icon-width/2;
+            }
+        }
+    }
+
+    &.button-full {
+        width: 100%;
+    }
+
+    &.button-icon {
+        min-width: auto;
+
+        .icon {
+            @include transform(none);
+
+            &.icon-left,
+            &.icon-right {
+                margin: 0 !important;
+            }
+        }
+    }
+
+    .icon {
+        line-height: $button-medium-height;
+
+        @include transform(translateY(25%));
+
+        &.icon-left {
+            float: left;
+        }
+
+        &.icon-right {
+            float: right;
+        }
+    }
+}
+
+.button-default {
+    @include button-style($button-default-bg, $button-default-border, $button-default-hover-bg, $button-default-hover-border, $button-default-text);
+    @include button-clear($button-default-border);
+    @include button-outline($button-default-border, $button-default-bg);
+}
+
+.button-base {
+    @include button-style($button-base-bg, $button-base-border, $button-base-hover-bg, $button-base-hover-border, $button-base-text);
+    @include button-clear($button-base-border);
+    @include button-outline($button-base-border, $button-base-bg);
+}
+
+.button-warning {
+    @include button-style($button-warning-bg, $button-warning-border, $button-warning-hover-bg, $button-warning-hover-border, $button-warning-text);
+    @include button-clear($button-warning-border);
+    @include button-outline($button-warning-border, $button-warning-bg);
+}
+
+.button-success {
+    @include button-style($button-success-bg, $button-success-border, $button-success-hover-bg, $button-success-hover-border, $button-success-text);
+    @include button-clear($button-success-border);
+    @include button-outline($button-success-border, $button-success-bg);
+}
+.button-ok {
+    @include button-style($button-ok-bg, $button-ok-border, $button-ok-hover-bg, $button-ok-hover-border, $button-ok-text);
+    @include button-clear($button-ok-border);
+    @include button-outline($button-ok-border, $button-ok-bg);
+}
+.button-cancel {
+    @include button-style($button-cancel-bg, $button-cancel-border, $button-cancel-hover-bg, $button-cancel-hover-border, $button-cancel-text);
+    @include button-clear($button-cancel-border);
+    @include button-outline($button-cancel-border, $button-cancel-bg);
+}
+
+.button-buy {
+    @include button-style($button-buy-bg, $button-buy-border, $button-buy-hover-bg, $button-buy-hover-border, $button-buy-text);
+    @include button-clear($button-buy-border);
+    @include button-outline($button-buy-border, $button-buy-bg);
+}
+
+.button-danger {
+    @include button-style($button-danger-bg, $button-danger-border, $button-danger-hover-bg, $button-danger-hover-border, $button-danger-text);
+    @include button-clear($button-danger-border);
+    @include button-outline($button-danger-border, $button-danger-bg);
+}
+
+.button-primary {
+    @include button-style($button-primary-bg, $button-primary-border, $button-primary-hover-bg, $button-primary-hover-border, $button-primary-text);
+    @include button-clear($button-primary-border);
+    @include button-outline($button-primary-border, $button-primary-bg);
+}
+
+.button-light {
+    @include button-style($button-light-bg, $button-light-border, $button-light-hover-bg, $button-light-hover-border, $button-light-text);
+    @include button-clear($button-light-border);
+    @include button-outline($button-light-border, $button-light-bg);
+}
+
+.button-danger-dark {
+    @include button-style($button-danger-dark-bg, $button-danger-dark-border, $button-danger-dark-hover-bg, $button-danger-dark-hover-border, $button-danger-dark-text);
+    @include button-clear($button-danger-dark-border);
+    @include button-outline($button-danger-dark-border, $button-danger-dark-bg);
+}
+
+.button-darken {
+    @include button-style($button-darken-bg, $button-darken-border, $button-darken-hover-bg, $button-darken-hover-border, $button-darken-text);
+    @include button-clear($button-darken-border);
+    @include button-outline($button-darken-border, $button-darken-bg);
+}
+
+.button-avise-me {
+    @include button-style($button-avise-me-bg, $button-avise-me-border, $button-avise-me-hover-bg, $button-avise-me-hover-border, $button-avise-me-text);
+    @include button-clear($button-avise-me-border);
+    @include button-outline($button-avise-me-border, $button-avise-me-bg);
+}
+
+.button-login {
+    @include button-style($button-login-bg, $button-login-border, $button-login-hover-bg, $button-login-hover-border, $button-login-text);
+    @include button-clear($button-login-border);
+    @include button-outline($button-login-border, $button-login-bg);
+}
+
+.button-cadastro {
+    @include button-style($button-cadastro-bg, $button-cadastro-border, $button-cadastro-hover-bg, $button-cadastro-hover-border, $button-cadastro-text);
+    @include button-clear($button-cadastro-border);
+    @include button-outline($button-cadastro-border, $button-cadastro-bg);
+}

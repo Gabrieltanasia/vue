@@ -1,0 +1,16 @@
+@import 'partials/base';
+@import 'partials/input';
+
+header{
+    .logo{
+        @include span(3 of 12);
+    }
+    
+    .search-area{
+        @include span(5 of 12);
+    }
+    
+    .login-ctn{
+        @include span(4 of 12 last);//ultimo item do grid deve conter o last para ele zerar o margin-right (independente do tamanho do grid)
+    }
+}
