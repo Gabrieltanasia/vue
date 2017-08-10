@@ -59,6 +59,7 @@ $cor-border-light: lighten($cor-bordas, 10);
 $cor-base-darken: darken($cor-base, 10);
 $cor-base-darken-strong: darken($cor-base, 20);
 
+$input-mini: 30px;
 
 //Complemento da fun��o center, seta os positions
 @mixin location($top, $right: $top, $bottom: $top, $left: $right) {

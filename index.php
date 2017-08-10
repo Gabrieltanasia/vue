@@ -1,14 +1,15 @@
 <html>
    <head>
       <link rel="stylesheet" href="css/main.css">
+      <!-- <script src="assets/js/jquery-3.2.1.min.js"></script> -->
       <script src="assets/js/vue.js"></script>
-      <script src="assets/js/jquery-3.2.1.min.js"></script>
+      <script src="assets/js/vue-resource.min.js"></script>
       <script src="assets/main.js"></script>
       <title>Vue e Sass, só sucesso</title>
    </head>
    <body>
       <div class="container">
-         <header id="app">
+         <!-- <header id="app">
             <div class="logo" v-bind:title="title">
                {{message}}
             </div>
@@ -23,10 +24,11 @@
                   </lista>
                </ol>
             </div>
-         </header>
+         </header> -->
          <div id="ajax">
             <form v-on:submit.prevent="onSubmit" method="POST">
-               <input v-model="nome" placeholder="Digite seu nome para cadastro">
+               <input class="input-mini" v-model="codigo" disabled>
+               <input v-model="nome" placeholder="Seu nome">
                <input type="submit">
             </form>
          </div>

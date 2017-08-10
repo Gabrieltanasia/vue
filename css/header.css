@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* README
- Esse ´┐¢ um arquivo base que tu vai/pode usar em todos os teus arquivos .scss ou seja cada novo arquivo .scss tu so faz o @import 'partials/base'; Nele tu define o que tu vai ter em todas os teus arquivos independente sobre o que seja; Ele tem o nome de _base.scss pois com o underline na frente ele nao ´┐¢ compilado gerando um arquivo base.scss Em quest´┐¢o de estrutura tu pode criar dentro da tua pasta sass uma pasta com o nome de partials e dentro dele tu coloca esse arquivo
- O QUE ´┐¢ UM PARTIAL? R.: ´┐¢ um arquivo que tu vai usar em mais de um lugar mas n´┐¢o vai usar em todos os lugares. Por exemplo, tu pode ter um partial _button.scss onde tu define nele os teus bot´┐¢es padr´┐¢es do site onde tu pode usar em diversos lugares ou pode criar um padrao de estilo de _input.scss onde nele ´┐¢ definido o teu padrao de inputs do site todo e esses partials pode colocar sempre dentro da pasta partials
+ Esse � um arquivo base que tu vai/pode usar em todos os teus arquivos .scss ou seja cada novo arquivo .scss tu so faz o @import 'partials/base'; Nele tu define o que tu vai ter em todas os teus arquivos independente sobre o que seja; Ele tem o nome de _base.scss pois com o underline na frente ele nao � compilado gerando um arquivo base.scss Em quest�o de estrutura tu pode criar dentro da tua pasta sass uma pasta com o nome de partials e dentro dele tu coloca esse arquivo
+ O QUE � UM PARTIAL? R.: � um arquivo que tu vai usar em mais de um lugar mas n�o vai usar em todos os lugares. Por exemplo, tu pode ter um partial _button.scss onde tu define nele os teus bot�es padr�es do site onde tu pode usar em diversos lugares ou pode criar um padrao de estilo de _input.scss onde nele � definido o teu padrao de inputs do site todo e esses partials pode colocar sempre dentro da pasta partials
  Exemplo: Tu tem o teu arquivo header.scss entao dentro dele tu faz o @import 'partials/base'; e como no teu header tu vai ter o teu input para pesquisa tu faz o @import 'partials/input';
 */
 .container { max-width: 1140px; margin-left: auto; margin-right: auto; }
@@ -14,7 +14,7 @@
 */
 /**
 Ex. 01
-.logo{ @include center();//centraliza 100% pois na fun´┐¢´┐¢o j´┐¢ tem parametro default
+.logo{ @include center();//centraliza 100% pois na fun��o j� tem parametro default
 }
 
 Ex. 02
@@ -28,20 +28,20 @@ Ex. 03
 */
 /* h1{ font-size: em(16);// vai ficar no css = font-size: 1em; }
 */
-/* UTILIZACAO DO BREAKPOINT O Breakpoint ´┐¢ um framework para utilizacao do media query nativamente no css utilizamos o media query desse modo
+/* UTILIZACAO DO BREAKPOINT O Breakpoint � um framework para utilizacao do media query nativamente no css utilizamos o media query desse modo
  @media(max-width 800px){ .logo{ float: right; } }
  Mas usando o breakpoint no Sass fica muito mais simples e organizado
  EX.:
 
- .logo{ @include span(3 of 12); background-color: $cor-base;//variavel definida no come´┐¢o do arquivo
- //dentro da pr´┐¢pria div tu define teu breakpoint @include breakpoint($break-medium){// $break-medium = max-width 800px (definido la no comeco do arquivo) @include span(5 of 12); } }
+ .logo{ @include span(3 of 12); background-color: $cor-base;//variavel definida no come�o do arquivo
+ //dentro da pr�pria div tu define teu breakpoint @include breakpoint($break-medium){// $break-medium = max-width 800px (definido la no comeco do arquivo) @include span(5 of 12); } }
  //Como isso vai ficar no css compilado
  @media(max-width 800px){ .logo{ width: 49.15254%; float: left; margin-right: 1.69492%; }
 
 */
 /* README
- Esse ´┐¢ um arquivo base que tu vai/pode usar em todos os teus arquivos .scss ou seja cada novo arquivo .scss tu so faz o @import 'partials/base'; Nele tu define o que tu vai ter em todas os teus arquivos independente sobre o que seja; Ele tem o nome de _base.scss pois com o underline na frente ele nao ´┐¢ compilado gerando um arquivo base.scss Em quest´┐¢o de estrutura tu pode criar dentro da tua pasta sass uma pasta com o nome de partials e dentro dele tu coloca esse arquivo
- O QUE ´┐¢ UM PARTIAL? R.: ´┐¢ um arquivo que tu vai usar em mais de um lugar mas n´┐¢o vai usar em todos os lugares. Por exemplo, tu pode ter um partial _button.scss onde tu define nele os teus bot´┐¢es padr´┐¢es do site onde tu pode usar em diversos lugares ou pode criar um padrao de estilo de _input.scss onde nele ´┐¢ definido o teu padrao de inputs do site todo e esses partials pode colocar sempre dentro da pasta partials
+ Esse � um arquivo base que tu vai/pode usar em todos os teus arquivos .scss ou seja cada novo arquivo .scss tu so faz o @import 'partials/base'; Nele tu define o que tu vai ter em todas os teus arquivos independente sobre o que seja; Ele tem o nome de _base.scss pois com o underline na frente ele nao � compilado gerando um arquivo base.scss Em quest�o de estrutura tu pode criar dentro da tua pasta sass uma pasta com o nome de partials e dentro dele tu coloca esse arquivo
+ O QUE � UM PARTIAL? R.: � um arquivo que tu vai usar em mais de um lugar mas n�o vai usar em todos os lugares. Por exemplo, tu pode ter um partial _button.scss onde tu define nele os teus bot�es padr�es do site onde tu pode usar em diversos lugares ou pode criar um padrao de estilo de _input.scss onde nele � definido o teu padrao de inputs do site todo e esses partials pode colocar sempre dentro da pasta partials
  Exemplo: Tu tem o teu arquivo header.scss entao dentro dele tu faz o @import 'partials/base'; e como no teu header tu vai ter o teu input para pesquisa tu faz o @import 'partials/input';
 */
 .container { max-width: 1140px; margin-left: auto; margin-right: auto; }
@@ -54,7 +54,7 @@ Ex. 03
 */
 /**
 Ex. 01
-.logo{ @include center();//centraliza 100% pois na fun´┐¢´┐¢o j´┐¢ tem parametro default
+.logo{ @include center();//centraliza 100% pois na fun��o j� tem parametro default
 }
 
 Ex. 02
@@ -68,13 +68,13 @@ Ex. 03
 */
 /* h1{ font-size: em(16);// vai ficar no css = font-size: 1em; }
 */
-/* UTILIZACAO DO BREAKPOINT O Breakpoint ´┐¢ um framework para utilizacao do media query nativamente no css utilizamos o media query desse modo
+/* UTILIZACAO DO BREAKPOINT O Breakpoint � um framework para utilizacao do media query nativamente no css utilizamos o media query desse modo
  @media(max-width 800px){ .logo{ float: right; } }
  Mas usando o breakpoint no Sass fica muito mais simples e organizado
  EX.:
 
- .logo{ @include span(3 of 12); background-color: $cor-base;//variavel definida no come´┐¢o do arquivo
- //dentro da pr´┐¢pria div tu define teu breakpoint @include breakpoint($break-medium){// $break-medium = max-width 800px (definido la no comeco do arquivo) @include span(5 of 12); } }
+ .logo{ @include span(3 of 12); background-color: $cor-base;//variavel definida no come�o do arquivo
+ //dentro da pr�pria div tu define teu breakpoint @include breakpoint($break-medium){// $break-medium = max-width 800px (definido la no comeco do arquivo) @include span(5 of 12); } }
  //Como isso vai ficar no css compilado
  @media(max-width 800px){ .logo{ width: 49.15254%; float: left; margin-right: 1.69492%; }
 
